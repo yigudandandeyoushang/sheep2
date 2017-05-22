@@ -5,7 +5,7 @@ import App from './App'
 import VRouter from 'vue-router'
 import VResource from 'vue-resource'
 import IndexPage from './pages/index'
-import contDedailPage from './pages/contentdetail'
+import proDetail from 'components/productdetails/prodetails'
 
 Vue.use(VRouter)
 Vue.use(VResource)
@@ -19,8 +19,8 @@ let router = new VRouter({
 			component:IndexPage
 		},
 		{
-			path:'/contentdetail',
-			component:contDedailPage
+			path:'/prodetails',
+			component:proDetail
 		}
 	]
 })

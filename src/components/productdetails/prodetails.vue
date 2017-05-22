@@ -1,6 +1,7 @@
 <template>
 	<div>
-		<div>
+		<div class="content">
+			<div class="title"></div>
 			<img src="" alt="">
 			<span>RMB:32/斤</span>
 			<span>生产地:内蒙古-锡林浩特</span>
@@ -35,15 +36,26 @@
 <script>
 export default{
 	props:{
-		commodityList:[]
+		//['commodityList']
 	},
 	data(){
 		return{
-			datailShow:false
+			datailShow:false,
+			commodityList:[]
+			//console.log(this.commodityList)
 		}
+	},
+	mounted(){
+		//console.log(commodityList[0])
+	},
+	methods:{
 	}
 }
 </script>
 <style scoped>
-	
+.content{
+	position: absolute;
+	top:0;
+	left: 0;
+}
 </style>

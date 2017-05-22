@@ -9,14 +9,10 @@
 				</div>
 				<p class="commodity-feature clearfix">
 					<i v-for="trait in clist.com_trait">{{ trait }}</i>
-					<!-- <i>{{ trait.trait_color }}</i>
-					<i>{{ trait.trait_smell }}</i> -->
-<!-- 					<i>色</i>
-					<i>香</i> -->
 				</p>
 			</li>
 		</ul>
-		<proDetail v-else="datailShow" v-show="datailShow"></proDetail>
+		<proDetail :commodityList="commodityList" else="datailShow" v-show="datailShow"></proDetail>
 	</div>
 </template>
 
@@ -28,6 +24,7 @@ export default{
 		.then((res)=>{
 			//console.log(res.data[0].pic_contenUrl)
 			this.commodityList = res.data
+			console.log(this.commodityList)
 		},(err)=>{
 			console.log(err)
 		})
